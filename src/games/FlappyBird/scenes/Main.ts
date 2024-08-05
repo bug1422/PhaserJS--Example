@@ -83,13 +83,14 @@ export class Main extends Scene {
             this.ui.updateScore(score)
         })
         // Debug
-        this.debugGraphics = this.add.graphics().setAlpha(0.75);
-        this.time.addEvent({
-            delay: 1000 / 60,  // 60 FPS
-            callback: this.drawDebug,
-            callbackScope: this,
-            loop: true
-        });
+        
+        // this.debugGraphics = this.add.graphics().setAlpha(0.75);
+        // this.time.addEvent({
+        //     delay: 1000 / 60,  // 60 FPS
+        //     callback: this.drawDebug,
+        //     callbackScope: this,
+        //     loop: true
+        // });
     }
     drawDebug() {
         this.debugGraphics.clear();
