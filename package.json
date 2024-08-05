@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "vite --config vite/config.serve.mjs",
+    "build": "vite build --config vite/config.prod.mjs"
   },
   "dependencies": {
-    "vue": "^3.2.13"
+    "matter-js": "^0.20.0",
+    "phaser": "^3.80.1",
+    "vue": "^3.2.13",
+    "vue-router": "^4.4.2"
   },
   "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@vitejs/plugin-vue": "^5.1.2",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "vite": "^5.3.5"
   }
 }

@@ -1,0 +1,65 @@
+{
+    "type": "fromPhysicsEditor",
+    "label": "bird",
+    "isStatic": false,
+    "density": 0.1,
+    "restitution": 0,
+    "friction": 0.1,
+    "frictionAir": 0.01,
+    "frictionStatic": 0.5,
+    "collisionFilter": {
+        "group": 0,
+        "category": 1,
+        "mask": 255
+    },
+    "fixtures": [
+        {
+            "label": "bird",
+            "isSensor": false,
+            "vertices": [
+                [
+                    {
+                        "x": 23,
+                        "y": 48
+                    },
+                    {
+                        "x": 38,
+                        "y": 48
+                    },
+                    {
+                        "x": 57,
+                        "y": 33
+                    },
+                    {
+                        "x": 55,
+                        "y": 25
+                    },
+                    {
+                        "x": 41.199989318847656,
+                        "y": 16.475006103515625
+                    },
+                    {
+                        "x": 16.52499008178711,
+                        "y": 18.20000648498535
+                    },
+                    {
+                        "x": 6.6999969482421875,
+                        "y": 24.250003814697266
+                    },
+                    {
+                        "x": 4,
+                        "y": 32
+                    },
+                    {
+                        "x": 12,
+                        "y": 35
+                    },
+                    {
+                        "x": 15,
+                        "y": 43
+                    }
+                ]
+            ]
+        }
+    ]
+}

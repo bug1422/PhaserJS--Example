@@ -1,27 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<button @click="setGame(true)">Snake</button>
+<button @click="setGame(false)">Flappy Bird</button>
+<div>{{ selected ? 'Snake' : 'Flappy Bird' }}</div>
+<Snake v-if="selected"/>
+<Flappy v-else/>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
+import { defineComponent, ref } from 'vue';
+import Snake from './games/Snake/Index.vue'
+import Flappy from './games/FlappyBird/Index.vue'
 export default defineComponent({
   name: 'App',
-  components: {
-    HelloWorld
+  setup(){
+    const selected = ref(true)
+    function setGame(v: boolean){
+      selected.value = v
+    }
+    return{
+      selected,
+      setGame
+    }
+  },
+  components:{
+    Snake,
+    Flappy
   }
-});
+})
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
